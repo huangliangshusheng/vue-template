@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  example:
+    image: node:14-bullseye
+    network_mode: "host"
+    working_dir: /example
+    volumes:
+      - ../:/example:cached
+      - node_modules_14:/example/node_modules
+    tty: true
+
+volumes:
+  node_modules_14:
+    external: true
