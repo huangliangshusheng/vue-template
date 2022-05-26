@@ -2,7 +2,7 @@
     <ul class="text-align">
         <li v-for="user in users" :key="user.id">
             <router-link :to="`/users/${user.id}`">
-                {{ user.id }}:{{ user.name }}
+                <UserItem :user="user" />
             </router-link>
         </li>
     </ul>
@@ -17,8 +17,9 @@ ul {
 
 <script setup lang="ts">
 import { User } from "../../lib/users";
+import UserItem from "../atoms/UserItem.vue";
 
 const { users } = defineProps<{
-    users?: User[];
+    users: User[];
 }>();
 </script>

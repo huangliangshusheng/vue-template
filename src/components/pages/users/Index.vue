@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
 import { get_users, User } from "../../../lib/users";
-import UserList from "../../organisms/UserList.vue";
+import UserList from "../../molecules/UserList.vue";
 import AppTemplate from "../../templates/AppTemplate.vue";
 
 const users = ref([] as User[]);
